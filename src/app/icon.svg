@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="LL Fruits monogram">
+  <defs>
+    <linearGradient id="llDisc" x1="14" y1="10" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F09A2B"/>
+      <stop offset="0.45" stop-color="#E8721E"/>
+      <stop offset="1" stop-color="#A12D3D"/>
+    </linearGradient>
+    <linearGradient id="llLeaf" x1="40" y1="4" x2="58" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4A9168"/>
+      <stop offset="1" stop-color="#25573F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- fruit disc -->
+  <circle cx="32" cy="34" r="26" fill="url(#llDisc)"/>
+
+  <!-- glossy highlight -->
+  <path d="M14 26a20 20 0 0 1 15-13" fill="none" stroke="#FFFFFF" stroke-opacity="0.42" stroke-width="3.4" stroke-linecap="round"/>
+
+  <!-- stem -->
+  <path d="M38.5 16.5c2.2-2.8 4.6-4.6 7.2-5.6" fill="none" stroke="#25573F" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- leaf -->
+  <path d="M45.4 10.6c4.6-4 10.6-4.3 14.6-3.4.8 4-.3 9.9-4.9 13.4-4.2 3.2-8.9 1.9-10.9-.6-2-2.5-2-6.4 1.2-9.4Z" fill="url(#llLeaf)"/>
+  <path d="M57.4 9.2c-3.8 1.4-7.6 3.8-10.6 7.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- LL monogram -->
+  <g fill="none" stroke="#FFF8EE" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 24v19h10"/>
+    <path d="M37 24v19h10"/>
+  </g>
+</svg>
