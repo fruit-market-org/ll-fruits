@@ -78,14 +78,14 @@ export default function Logo({ markOnly = false, light = false, size = 44, class
       {!markOnly && (
         <span className="flex flex-col leading-none">
           <span
-            className={`font-display text-[1.35rem] font-semibold tracking-tight sm:text-[1.5rem] ${
+            className={`whitespace-nowrap font-display text-[1.35rem] font-semibold tracking-tight sm:text-[1.5rem] ${
               light ? "text-cream" : "text-ink"
             }`}
           >
             {COMPANY.shortName}
           </span>
           <span
-            className={`mt-1 text-[0.62rem] font-medium uppercase tracking-[0.17em] ${
+            className={`mt-1 whitespace-nowrap text-[0.62rem] font-medium uppercase tracking-[0.17em] ${
               light ? "text-cream/70" : "text-muted"
             }`}
           >

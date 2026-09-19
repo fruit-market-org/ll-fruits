@@ -40,7 +40,7 @@ export default function WhatsAppButton({
       href={whatsappHref(number, message)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 ${VARIANTS[variant]} ${SIZES[size]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-all duration-200 ${VARIANTS[variant]} ${SIZES[size]} ${className}`}
     >
       <Icon name="whatsapp" size={size === "lg" ? 20 : 18} />
       {label}

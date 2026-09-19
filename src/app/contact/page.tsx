@@ -35,8 +35,8 @@ export default function ContactPage() {
       {/* WhatsApp cards */}
       <section className="container-page py-16 sm:py-20">
         <div className="grid gap-6 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <div className="rounded-xl2 border border-leaf-500/25 bg-leaf-50/60 p-8 sm:p-10">
+          <div className="min-w-0 lg:col-span-7">
+            <div className="rounded-xl2 border border-leaf-500/25 bg-leaf-50/60 p-6 sm:p-8 lg:p-10">
               <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-leaf-500 text-white">
                 <Icon name="whatsapp" size={28} />
               </span>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 {[WHATSAPP.primary, WHATSAPP.secondary].map((entry) => (
                   <div
                     key={entry.number}
-                    className="flex flex-col rounded-xl border border-line bg-white p-6"
+                    className="flex flex-col rounded-xl border border-line bg-white p-5 sm:p-6"
                   >
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-pom-600">
                       {entry.label}
@@ -73,8 +73,8 @@ export default function ContactPage() {
           </div>
 
           {/* Direct details */}
-          <div className="lg:col-span-5">
-            <div className="h-full rounded-xl2 border border-line bg-white p-8">
+          <div className="min-w-0 lg:col-span-5">
+            <div className="h-full rounded-xl2 border border-line bg-white p-6 sm:p-8">
               <h2 className="font-display text-xl font-semibold tracking-tight text-ink">
                 Other ways to reach us
               </h2>
@@ -225,10 +225,10 @@ export default function ContactPage() {
       {/* Terms */}
       <section className="container-page py-16 sm:py-20">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <SectionHeading eyebrow="Please note" title="Terms of trade" />
           </div>
-          <div className="lg:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
             <ul className="space-y-5">
               {TRADE_TERMS.map((term) => (
                 <li

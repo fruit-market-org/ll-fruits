@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Icon from "./Icon";
 import Logo from "./Logo";
-import WhatsAppButton from "./WhatsAppButton";
-import { CONTACT, NAV_LINKS } from "@/lib/constants";
+import WhatsAppButton, { whatsappHref } from "./WhatsAppButton";
+import { CONTACT, NAV_LINKS, WHATSAPP } from "@/lib/constants";
 
 export default function Header() {
   const pathname = usePathname();
@@ -75,13 +75,13 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   aria-current={active ? "page" : undefined}
-                  className={`relative rounded-full px-4 py-2 text-[0.92rem] font-medium transition-colors ${
+                  className={`relative rounded-full px-3 py-2 text-[0.92rem] font-medium transition-colors lg:px-4 ${
                     active ? "text-pom-600" : "text-ink-soft hover:text-pom-600"
                   }`}
                 >
                   {link.label}
                   {active && (
-                    <span className="absolute inset-x-4 -bottom-0.5 h-0.5 rounded-full bg-pom-500" />
+                    <span className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-pom-500 lg:inset-x-4" />
                   )}
                 </Link>
               );
@@ -89,7 +89,20 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <WhatsAppButton className="hidden sm:inline-flex" />
+            {/* Tablet widths are too tight for the full pill, so the CTA
+                becomes icon-only between md and lg. */}
+            <a
+              href={whatsappHref(WHATSAPP.primary.number)}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`WhatsApp us on ${WHATSAPP.primary.display}`}
+              className="hidden h-11 w-11 items-center justify-center rounded-full bg-leaf-500 text-white transition-colors hover:bg-leaf-600 md:inline-flex lg:hidden"
+            >
+              <Icon name="whatsapp" size={21} />
+            </a>
+            <span className="hidden lg:block">
+              <WhatsAppButton />
+            </span>
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
