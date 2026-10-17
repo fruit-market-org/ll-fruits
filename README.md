@@ -23,8 +23,8 @@ npm run lint    # eslint
 | `/`         | Hero, headline numbers, about preview, product preview, services, process |
 | `/about`    | Company story, firm-at-a-glance table, milestones, partners, values       |
 | `/products` | Full product range, quality notes, season guide table                     |
-| `/services` | Services, four-step process, who we serve, trade terms                    |
-| `/contact`  | WhatsApp-first contact, phones, email, hours, map, trade terms            |
+| `/services` | Services, four-step process, who we serve                                 |
+| `/contact`  | WhatsApp-first contact, phones, email, hours, map                         |
 
 There is **no email/contact form anywhere on the site** — the contact page is
 built around WhatsApp buttons, plus tap-to-call and tap-to-mail links. A floating
@@ -34,8 +34,8 @@ WhatsApp button is pinned to every page.
 
 `src/lib/constants.ts` is the single source of truth for every piece of business
 content: company details, address, phone numbers, WhatsApp numbers, social links,
-products, services, milestones, partners, stats, business hours, trade terms and
-SEO metadata. Change a value there and it updates everywhere on the site — no
+products, services, milestones, partners, stats, business hours and SEO
+metadata. Change a value there and it updates everywhere on the site — no
 component edits needed.
 
 Things worth knowing:

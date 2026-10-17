@@ -45,7 +45,7 @@ export const CONTACT = {
   ],
   /** Mobile contacts for the people who run the firm. */
   mobiles: [{ label: "Naresh", display: "+91 98259 31608", tel: "+919825931608" }],
-  email: "1122204367@gmail.com",
+  email: "LL22204367@gmail.com",
 } as const;
 
 /** Numbers wired to the "WhatsApp Us" buttons. `number` must be in E.164 without "+". */
@@ -363,19 +363,6 @@ export const PARTNERS = [
       "Runs the daily trade at the New Fruit Market stall — sourcing, grading, pricing and looking after long-standing buyers.",
   },
 ] as const;
-
-/* -------------------------------------------------------------------------- */
-/*  Trade terms (as printed on the firm's bill)                                */
-/* -------------------------------------------------------------------------- */
-
-export const TRADE_TERMS = [
-  "This transaction is subject to the rules & regulations of our association.",
-  "Any claim regarding a change of entry or a difference in rate must be raised within five days. No claim will be entertained thereafter.",
-  "All dealings are subject to Ahmedabad jurisdiction.",
-] as const;
-
-export const TRADE_TERMS_GUJARATI =
-  "દાખલા બદલવા ભાવ ફરક લેવા હોય તો દિવસ પાંચની અંદર જાણ કરવી, તે પછી અમારી કોઈ જવાબદારી રહેશે નહીં.";
 
 /* -------------------------------------------------------------------------- */
 /*  Business hours                                                             */

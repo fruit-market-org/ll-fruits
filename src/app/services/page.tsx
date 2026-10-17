@@ -3,7 +3,7 @@ import CTABand from "@/components/CTABand";
 import Icon from "@/components/Icon";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
-import { DIFFERENTIATORS, PROCESS_STEPS, SERVICES, TRADE_TERMS } from "@/lib/constants";
+import { PROCESS_STEPS, SERVICES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -78,54 +78,27 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Who we serve + terms */}
+      {/* Who we serve */}
       <section className="container-page py-16 sm:py-20">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-6">
-            <SectionHeading
-              eyebrow="Who we serve"
-              title="Buyers and growers across Gujarat"
-              description="Over 1500 clients have traded with us — from a single shop counter to full-load institutional supply."
-            />
-            <ul className="mt-9 space-y-3.5">
-              {BUYER_TYPES.map((type) => (
-                <li key={type} className="flex items-start gap-3 text-[0.97rem] text-ink-soft">
-                  <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-leaf-50 text-leaf-600">
-                    <Icon name="check" size={14} />
-                  </span>
-                  {type}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="lg:col-span-6">
-            <div className="rounded-xl2 border border-line bg-white p-8">
-              <h2 className="font-display text-xl font-semibold tracking-tight text-ink">
-                Our trade terms
-              </h2>
-              <p className="mt-3 text-[0.9rem] text-muted">
-                The same terms printed on every bill we issue.
-              </p>
-              <ul className="mt-7 space-y-5">
-                {TRADE_TERMS.map((term) => (
-                  <li key={term} className="flex gap-3.5 text-[0.93rem] leading-relaxed text-ink-soft">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-pom-500" />
-                    {term}
-                  </li>
-                ))}
-              </ul>
-              {DIFFERENTIATORS[1] && (
-                <p className="mt-8 rounded-xl bg-cream-deep/60 p-5 text-[0.9rem] leading-relaxed text-ink-soft">
-                  <strong className="font-semibold text-ink">
-                    {DIFFERENTIATORS[1].title}.
-                  </strong>{" "}
-                  {DIFFERENTIATORS[1].description}
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
+        <SectionHeading
+          align="center"
+          eyebrow="Who we serve"
+          title="Buyers and growers across Gujarat"
+          description="Over 1500 clients have traded with us — from a single shop counter to full-load institutional supply."
+        />
+        <ul className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
+          {BUYER_TYPES.map((type) => (
+            <li
+              key={type}
+              className="flex items-start gap-3.5 rounded-xl2 border border-line bg-white p-5 text-[0.97rem] text-ink-soft"
+            >
+              <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-leaf-50 text-leaf-600">
+                <Icon name="check" size={14} />
+              </span>
+              {type}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <div className="pb-16 sm:pb-20">

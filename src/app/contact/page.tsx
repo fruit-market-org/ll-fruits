@@ -10,8 +10,6 @@ import {
   MAP_EMBED_URL,
   MAP_LINK_URL,
   SOCIAL,
-  TRADE_TERMS,
-  TRADE_TERMS_GUJARATI,
   WHATSAPP,
 } from "@/lib/constants";
 
@@ -218,34 +216,6 @@ export default function ContactPage() {
               allowFullScreen
               className="h-[320px] w-full border-0 sm:h-[440px]"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Terms */}
-      <section className="container-page py-16 sm:py-20">
-        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
-          <div className="min-w-0 lg:col-span-5">
-            <SectionHeading eyebrow="Please note" title="Terms of trade" />
-          </div>
-          <div className="min-w-0 lg:col-span-7">
-            <ul className="space-y-5">
-              {TRADE_TERMS.map((term) => (
-                <li
-                  key={term}
-                  className="flex gap-3.5 text-[0.97rem] leading-relaxed text-ink-soft"
-                >
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-pom-500" />
-                  {term}
-                </li>
-              ))}
-            </ul>
-            <p
-              lang="gu"
-              className="mt-7 rounded-xl border border-line bg-white p-5 text-[0.95rem] leading-relaxed text-muted"
-            >
-              {TRADE_TERMS_GUJARATI}
-            </p>
           </div>
         </div>
       </section>
