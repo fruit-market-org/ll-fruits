@@ -44,10 +44,7 @@ export const CONTACT = {
     { label: "Residence", display: "079 - 2286 4867", tel: "+917922864867" },
   ],
   /** Mobile contacts for the people who run the firm. */
-  mobiles: [
-    { label: "Naresh", display: "+91 98259 31608", tel: "+919825931608" },
-    { label: "Sunilbhai", display: "+91 99091 56469", tel: "+919909156469" },
-  ],
+  mobiles: [{ label: "Naresh", display: "+91 98259 31608", tel: "+919825931608" }],
   email: "1122204367@gmail.com",
 } as const;
 
