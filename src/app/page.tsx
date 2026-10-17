@@ -10,13 +10,15 @@ import {
   COMPANY,
   CONTACT,
   DIFFERENTIATORS,
+  PRODUCT_CATEGORIES,
   PRODUCTS,
   PROCESS_STEPS,
   SERVICES,
 } from "@/lib/constants";
 
 export default function HomePage() {
-  const featured = PRODUCTS.slice(0, 4);
+  // Two from each range, so the preview shows what we actually trade.
+  const featured = PRODUCT_CATEGORIES.flatMap((category) => category.products.slice(0, 2));
 
   return (
     <>
@@ -37,7 +39,7 @@ export default function HomePage() {
             <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-muted sm:text-[1.12rem]">
               {COMPANY.legalName} is a fruit merchant and commission agent at{" "}
               {CONTACT.address.line1}, {CONTACT.address.line2}, {CONTACT.address.city} — supplying
-              graded grapes, pomegranate, dates, melons and citrus to traders across Gujarat.
+              graded Indian and imported fruit to traders across Gujarat.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -171,8 +173,8 @@ export default function HomePage() {
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeading
               eyebrow="Our range"
-              title="Fruit we handle every season"
-              description="Seven categories, sourced at the peak of their season and graded before they are priced."
+              title="Indian and imported fruit"
+              description="Two ranges and twenty-eight varieties, each sourced at the peak of its own season and graded before it is priced."
             />
             <Link
               href="/products"
@@ -187,7 +189,27 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 flex flex-wrap gap-3">
+            {PRODUCT_CATEGORIES.map((category) => (
+              <Link
+                key={category.slug}
+                href={`/products#${category.slug}`}
+                className="group inline-flex items-center gap-2.5 rounded-full border border-line bg-white px-5 py-2.5 text-[0.9rem] font-medium text-ink-soft transition-colors hover:border-pom-500/40 hover:text-pom-600"
+              >
+                {category.name}
+                <span className="text-[0.78rem] text-muted">
+                  {category.products.length} varieties
+                </span>
+                <Icon
+                  name="arrow"
+                  size={16}
+                  className="transition-transform group-hover:translate-x-0.5"
+                />
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {featured.map((product) => (
               <ProductCard key={product.slug} product={product} compact />
             ))}

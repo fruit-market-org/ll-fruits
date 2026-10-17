@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Mangosteen, whole and halved">
+  <defs>
+    <radialGradient id="mangosteen-g" cx="0.34" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#7D4668"/><stop offset="0.5" stop-color="#4E1F3C"/><stop offset="1" stop-color="#2A0C20"/>
+    </radialGradient>
+  <linearGradient id="mangosteen-lf1" x1="130" y1="70" x2="196" y2="118" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6BA86F"/><stop offset="1" stop-color="#2F6B4F"/></linearGradient>
+  </defs>
+  <ellipse cx="160" cy="224" rx="100" ry="10" fill="#2A1F14" opacity="0.08"/>
+  <circle cx="236" cy="156" r="48" fill="#5A2444"/>
+  <circle cx="236" cy="156" r="40" fill="#F3E4EC"/>
+  <g fill="#FFFFFF" stroke="#D9C3D0" stroke-width="2"><path d="M236 156L236.0 126.0A30 30 0 0 1 262.0 141.0Z"/><path d="M236 156L262.0 141.0A30 30 0 0 1 262.0 171.0Z"/><path d="M236 156L262.0 171.0A30 30 0 0 1 236.0 186.0Z"/><path d="M236 156L236.0 186.0A30 30 0 0 1 210.0 171.0Z"/><path d="M236 156L210.0 171.0A30 30 0 0 1 210.0 141.0Z"/><path d="M236 156L210.0 141.0A30 30 0 0 1 236.0 126.0Z"/></g>
+  <circle cx="236" cy="156" r="5" fill="#E8D4DF"/>
+  <ellipse cx="124" cy="152" rx="60" ry="58" fill="url(#mangosteen-g)"/>
+  <path d="M84 126a56 54 0 0 1 26-26" fill="none" stroke="#FFFFFF" stroke-opacity="0.26" stroke-width="7" stroke-linecap="round"/>
+  <g transform="translate(-36 2)"><ellipse cx="134.0" cy="100.0" rx="24" ry="14" transform="rotate(94 134.0 100.0)" fill="url(#mangosteen-lf1)"/><ellipse cx="186.0" cy="100.0" rx="24" ry="14" transform="rotate(31 186.0 100.0)" fill="url(#mangosteen-lf1)"/><ellipse cx="138.7" cy="93.1" rx="24" ry="14" transform="rotate(107 138.7 93.1)" fill="url(#mangosteen-lf1)"/><ellipse cx="181.3" cy="93.1" rx="24" ry="14" transform="rotate(19 181.3 93.1)" fill="url(#mangosteen-lf1)"/></g>
+  <circle cx="124" cy="96" r="9" fill="#6B8A3A"/>
+</svg>

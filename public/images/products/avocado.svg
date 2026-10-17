@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Avocado, whole and halved">
+  <defs>
+    <linearGradient id="avocado-g" x1="80" y1="92" x2="170" y2="208" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5A7A3A"/><stop offset="0.55" stop-color="#36571F"/><stop offset="1" stop-color="#1E3411"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="160" cy="224" rx="100" ry="10" fill="#2A1F14" opacity="0.08"/>
+  <path d="M236 98c26 0 44 24 44 52 0 34-20 58-44 58s-44-24-44-58c0-28 18-52 44-52Z" fill="#4E7030"/>
+  <path d="M236 106c21 0 36 20 36 44 0 29-16 50-36 50s-36-21-36-50c0-24 15-44 36-44Z" fill="#E4EDA8"/>
+  <path d="M236 118c15 0 26 15 26 33 0 21-11 36-26 36s-26-15-26-36c0-18 11-33 26-33Z" fill="#CBDE82"/>
+  <ellipse cx="236" cy="158" rx="21" ry="24" fill="#9C6B36"/>
+  <path d="M226 148c5-5 13-5 19 0" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M118 90c28 0 48 26 48 58 0 36-22 62-48 62s-48-26-48-62c0-32 20-58 48-58Z" fill="url(#avocado-g)"/>
+  <g fill="#7E9A54" opacity="0.3">
+    <circle cx="100" cy="122" r="2.6"/><circle cx="128" cy="112" r="2.4"/><circle cx="142" cy="144" r="2.6"/>
+    <circle cx="92" cy="158" r="2.4"/><circle cx="120" cy="168" r="2.6"/><circle cx="142" cy="186" r="2.4"/>
+    <circle cx="100" cy="194" r="2.2"/>
+  </g>
+  <path d="M84 126a48 54 0 0 1 22-26" fill="none" stroke="#FFFFFF" stroke-opacity="0.26" stroke-width="7" stroke-linecap="round"/>
+  <path d="M118 90c0-10-2-17-6-23" fill="none" stroke="#5A3A1C" stroke-width="6" stroke-linecap="round"/>
+</svg>

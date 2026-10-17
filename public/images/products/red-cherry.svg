@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Fresh red cherries">
+  <defs>
+    <radialGradient id="red-cherry-g" cx="0.34" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#E8485C"/><stop offset="0.5" stop-color="#B41230"/><stop offset="1" stop-color="#6B0618"/>
+    </radialGradient>
+  <linearGradient id="red-cherry-lf1" x1="160" y1="46" x2="226" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6BA86F"/><stop offset="1" stop-color="#2F6B4F"/></linearGradient>
+  </defs>
+  <ellipse cx="160" cy="224" rx="92" ry="10" fill="#2A1F14" opacity="0.08"/>
+  <path d="M160 62c-16 26-38 50-46 92" fill="none" stroke="#6B8A3A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M160 62c18 24 40 46 50 88" fill="none" stroke="#6B8A3A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M162 60c14-12 34-14 52-9-4 18-18 30-36 29-8 0-13-4-15-8-2-4 0-9-1-12Z" fill="url(#red-cherry-lf1)"/>
+  <circle cx="110" cy="174" r="42" fill="url(#red-cherry-g)"/>
+  <circle cx="214" cy="178" r="38" fill="url(#red-cherry-g)"/>
+  <g fill="#FFFFFF" opacity="0.32">
+    <ellipse cx="94" cy="156" rx="11" ry="7" transform="rotate(-30 94 156)"/>
+    <ellipse cx="200" cy="162" rx="10" ry="6" transform="rotate(-30 200 162)"/>
+  </g>
+</svg>

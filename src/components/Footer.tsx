@@ -6,7 +6,7 @@ import {
   COMPANY,
   CONTACT,
   NAV_LINKS,
-  PRODUCTS,
+  PRODUCT_CATEGORIES,
   SOCIAL,
   WHATSAPP,
 } from "@/lib/constants";
@@ -86,12 +86,23 @@ export default function Footer() {
           <h2 className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-cream">
             What we trade
           </h2>
-          <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 text-sm lg:grid-cols-1 lg:gap-y-3">
-            {PRODUCTS.map((product) => (
-              <li key={product.slug}>
-                <Link href="/products" className="transition-colors hover:text-saffron-500">
-                  {product.name}
+          <ul className="mt-5 space-y-5 text-sm">
+            {PRODUCT_CATEGORIES.map((category) => (
+              <li key={category.slug}>
+                <Link
+                  href={`/products#${category.slug}`}
+                  className="font-medium text-cream transition-colors hover:text-saffron-500"
+                >
+                  {category.name}
+                  <span className="ml-2 text-cream/45">{category.products.length}</span>
                 </Link>
+                <p className="mt-1.5 leading-relaxed text-cream/60">
+                  {category.products
+                    .slice(0, 4)
+                    .map((product) => product.name)
+                    .join(", ")}{" "}
+                  and more
+                </p>
               </li>
             ))}
           </ul>

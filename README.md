@@ -22,7 +22,7 @@ npm run lint    # eslint
 | ----------- | ------------------------------------------------------------------------ |
 | `/`         | Hero, headline numbers, about preview, product preview, services, process |
 | `/about`    | Company story, firm-at-a-glance table, milestones, partners, values       |
-| `/products` | Full product range, quality notes, season guide table                     |
+| `/products` | Indian & imported ranges, quality notes, season guide table               |
 | `/services` | Services, four-step process, who we serve                                 |
 | `/contact`  | WhatsApp-first contact, phones, email, hours, map                         |
 
@@ -59,11 +59,24 @@ Things worth knowing:
 - Colour tokens and fonts are defined in `src/app/globals.css` under `@theme`.
   Fonts are Fraunces (display) and Inter (body), loaded via `next/font`.
 
+## The product catalogue
+
+`PRODUCT_CATEGORIES` in `src/lib/constants.ts` holds the whole catalogue, split
+into the two ranges the firm trades:
+
+- **Indian Fruits** — 10 varieties
+- **Imported Fruits** — 18 varieties
+
+`PRODUCTS` is a flat view of both, derived automatically — nothing to keep in
+sync. Add, remove or reorder a fruit inside a category and the products page,
+the season guide, the home page preview and the footer all follow.
+
 ## Product images
 
 Product artwork lives in `public/images/products/` as original SVG illustrations
-(no photographs of people, only fruit). Each product in `PRODUCTS` points at its
-file through the `image` field.
+(no photographs of people, only fruit). Each product points at its file through
+the `image` field, and each file namespaces its own gradient ids so the artwork
+stays correct even if several are inlined on one page.
 
 To swap in photographs later, drop the file into `public/images/products/` and
 change that one `image` path in `src/lib/constants.ts` — nothing else needs to

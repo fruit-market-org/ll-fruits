@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Chikoo sapota, whole and halved">
+  <defs>
+    <radialGradient id="chikoo-g" cx="0.34" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#B08357"/><stop offset="0.55" stop-color="#8A6038"/><stop offset="1" stop-color="#553519"/>
+    </radialGradient>
+  <linearGradient id="chikoo-lf1" x1="130" y1="64" x2="186" y2="100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6BA86F"/><stop offset="1" stop-color="#2F6B4F"/></linearGradient>
+  </defs>
+  <ellipse cx="160" cy="224" rx="100" ry="10" fill="#2A1F14" opacity="0.08"/>
+  <ellipse cx="236" cy="156" rx="46" ry="48" fill="#6E4524"/>
+  <ellipse cx="236" cy="156" rx="41" ry="43" fill="#C08B50"/>
+  <ellipse cx="236" cy="156" rx="33" ry="35" fill="#D9A469"/>
+  <g fill="#231308">
+    <ellipse cx="228" cy="150" rx="5" ry="10" transform="rotate(-16 228 150)"/>
+    <ellipse cx="244" cy="162" rx="5" ry="10" transform="rotate(16 244 162)"/>
+  </g>
+  <ellipse cx="122" cy="150" rx="60" ry="58" fill="url(#chikoo-g)"/>
+  <g fill="#4A2D14" opacity="0.18">
+    <circle cx="104" cy="124" r="2.4"/><circle cx="134" cy="118" r="2.2"/><circle cx="152" cy="140" r="2.4"/>
+    <circle cx="96" cy="158" r="2.2"/><circle cx="126" cy="166" r="2.4"/><circle cx="150" cy="178" r="2.2"/>
+    <circle cx="106" cy="188" r="2.2"/>
+  </g>
+  <path d="M80 126a56 54 0 0 1 26-26" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round"/>
+  <path d="M122 94c-2-12-5-19-10-25" fill="none" stroke="#5A3A1C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M126 84c12-14 30-19 46-16-5 19-20 31-36 29-6-1-10-5-11-8-1-2 0-4 1-5Z" fill="url(#chikoo-lf1)"/>
+</svg>

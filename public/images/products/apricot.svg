@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Whole and halved apricot">
+  <defs>
+    <radialGradient id="apricot-g" cx="0.34" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#FBC46A"/><stop offset="0.55" stop-color="#F09A34"/><stop offset="1" stop-color="#C96E15"/>
+    </radialGradient>
+    <clipPath id="apricot-c"><ellipse cx="118" cy="148" rx="60" ry="58"/></clipPath>
+  <linearGradient id="apricot-lf1" x1="125" y1="62" x2="180" y2="96" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6BA86F"/><stop offset="1" stop-color="#2F6B4F"/></linearGradient>
+  </defs>
+  <ellipse cx="160" cy="224" rx="100" ry="10" fill="#2A1F14" opacity="0.08"/>
+  <ellipse cx="118" cy="148" rx="60" ry="58" fill="url(#apricot-g)"/>
+  <g clip-path="url(#apricot-c)">
+    <path d="M118 90c-12 20-12 48 0 68" fill="none" stroke="#C96E15" stroke-opacity="0.4" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <path d="M74 124a54 52 0 0 1 26-26" fill="none" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="7" stroke-linecap="round"/>
+  <path d="M120 92c10-14 28-20 44-18-4 18-18 30-34 29-7 0-10-5-11-8-1-2 0-2 1-3Z" fill="url(#apricot-lf1)"/>
+  <ellipse cx="236" cy="156" rx="48" ry="48" fill="#C96E15"/>
+  <ellipse cx="236" cy="156" rx="43" ry="43" fill="#FBD9A0"/>
+  <ellipse cx="236" cy="156" rx="15" ry="19" fill="#7A4A22"/>
+  <path d="M228 146c4-3 10-3 15 0" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

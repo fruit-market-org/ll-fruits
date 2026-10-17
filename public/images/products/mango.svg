@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Fresh mango">
+  <defs>
+    <linearGradient id="mango-g" x1="100" y1="84" x2="226" y2="206" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9FC24C"/><stop offset="0.3" stop-color="#F3C83E"/>
+      <stop offset="0.68" stop-color="#F0922E"/><stop offset="1" stop-color="#C33A22"/>
+    </linearGradient>
+  <linearGradient id="mango-lf1" x1="142" y1="36" x2="206" y2="82" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6BA86F"/><stop offset="1" stop-color="#2F6B4F"/></linearGradient>
+  </defs>
+  <ellipse cx="160" cy="224" rx="92" ry="10" fill="#2A1F14" opacity="0.08"/>
+  <path d="M140 82c46-6 88 22 94 62 5 36-24 66-66 70-40 4-80-16-90-50-11-38 18-78 62-82Z" fill="url(#mango-g)"/>
+  <path d="M104 142c6-28 24-46 46-52" fill="none" stroke="#FFFFFF" stroke-opacity="0.42" stroke-width="9" stroke-linecap="round"/>
+  <g fill="#A52E1C" opacity="0.22">
+    <circle cx="186" cy="178" r="2.6"/><circle cx="204" cy="160" r="2.4"/><circle cx="170" cy="194" r="2.4"/>
+    <circle cx="206" cy="186" r="2.2"/><circle cx="190" cy="200" r="2.2"/><circle cx="214" cy="170" r="2"/>
+  </g>
+  <path d="M138 82c-3-12-7-19-13-25" fill="none" stroke="#6B4A2A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M130 62c12-14 32-19 50-16-6 20-22 33-40 31-7-1-11-5-12-9-1-2 1-4 2-6Z" fill="url(#mango-lf1)"/>
+</svg>

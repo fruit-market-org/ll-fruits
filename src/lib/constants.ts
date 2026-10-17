@@ -104,7 +104,7 @@ export const NAV_LINKS = [
 export const STATS = [
   { value: "30+", label: "Years of serving experience" },
   { value: "1500+", label: "Clients & customers served" },
-  { value: "7", label: "Fruit categories in season" },
+  { value: "28", label: "Indian & imported varieties" },
   { value: "1960", label: "Family in the fruit trade since" },
 ] as const;
 
@@ -125,78 +125,324 @@ export type Product = {
   accent: string;
 };
 
-export const PRODUCTS: Product[] = [
+export type ProductCategory = {
+  slug: string;
+  name: string;
+  /** Short label shown above the category heading. */
+  eyebrow: string;
+  description: string;
+  products: Product[];
+};
+
+/**
+ * The full catalogue, split into the two ranges we trade.
+ * Add, remove or reorder a fruit here and it updates across the whole site.
+ */
+export const PRODUCT_CATEGORIES: ProductCategory[] = [
   {
-    slug: "grapes",
-    name: "Grapes",
-    varieties: "Thompson Seedless, Sonaka, Black Jumbo",
-    season: "January – April",
+    slug: "indian-fruits",
+    name: "Indian Fruits",
+    eyebrow: "Grown in India",
     description:
-      "Tight, well-filled bunches sourced from the Nashik and Sangli belts. Graded for colour, berry size and sugar, then pre-cooled and packed so they reach the counter with their bloom intact.",
-    image: "/images/products/grapes.svg",
-    accent: "#F1ECF7",
+      "Sourced directly from the growing belts we have bought from for decades — Nashik and Sangli grapes, Kashmir apples, Kesar mango, Bhagwa pomegranate and Gujarat's own chikoo.",
+    products: [
+      {
+        slug: "grapes",
+        name: "Grapes",
+        varieties: "Thompson Seedless, Sonaka, Black Jumbo",
+        season: "January – April",
+        description:
+          "Tight, well-filled bunches from the Nashik and Sangli belts. Graded for colour, berry size and sugar, then pre-cooled so they reach the counter with their bloom intact.",
+        image: "/images/products/grapes.svg",
+        accent: "#F1ECF7",
+      },
+      {
+        slug: "apple",
+        name: "Apple",
+        varieties: "Delicious, Royal Gala, Kashmiri",
+        season: "August – February",
+        description:
+          "Firm, high-colour apples from the Kashmir and Himachal hills, counted and tray-packed by size so every box grades the same.",
+        image: "/images/products/apple.svg",
+        accent: "#FBEAEA",
+      },
+      {
+        slug: "mango",
+        name: "Mango",
+        varieties: "Kesar, Alphonso, Badam, Langra",
+        season: "March – July",
+        description:
+          "The season everyone waits for. Kesar and Alphonso handled in ripening lots and released to match your selling window.",
+        image: "/images/products/mango.svg",
+        accent: "#FDF2DC",
+      },
+      {
+        slug: "pomegranate",
+        name: "Pomegranate",
+        varieties: "Bhagwa, Ganesh",
+        season: "September – February",
+        description:
+          "Deep-blushed Bhagwa with heavy, ruby arils and a clean skin finish. Counted, cushioned and boxed by size.",
+        image: "/images/products/pomegranate.svg",
+        accent: "#FBEAEA",
+      },
+      {
+        slug: "muskmelon",
+        name: "Muskmelon",
+        varieties: "Kharbuja, netted varieties",
+        season: "March – June",
+        description:
+          "Field-ripened melons picked at full net and aroma, sorted by weight and firmness for consistent shelf life through the summer rush.",
+        image: "/images/products/muskmelon.svg",
+        accent: "#FCF3E2",
+      },
+      {
+        slug: "orange",
+        name: "Orange",
+        varieties: "Nagpur mandarin, Kinnow, mini orange",
+        season: "November – March",
+        description:
+          "Easy-peel mandarins with a clean sweet-tart balance, graded small to medium for fruit bowls, gifting packs and daily retail counters.",
+        image: "/images/products/orange.svg",
+        accent: "#FDEEE2",
+      },
+      {
+        slug: "kiwi",
+        name: "Kiwi",
+        varieties: "Hayward, Indian & imported grades",
+        season: "Year round",
+        description:
+          "Firm, evenly sized kiwi held at the right temperature and released in ripening stages that suit your selling window.",
+        image: "/images/products/kiwi.svg",
+        accent: "#EDF3E6",
+      },
+      {
+        slug: "dragon-fruit",
+        name: "Dragon Fruit",
+        varieties: "Red and white flesh",
+        season: "June – November",
+        description:
+          "Bright, heavy pitaya from Gujarat and Maharashtra growers, cut with the bracts intact so the fruit arrives looking as fresh as it eats.",
+        image: "/images/products/dragon-fruit.svg",
+        accent: "#FBE8F0",
+      },
+      {
+        slug: "chikoo",
+        name: "Chikoo",
+        varieties: "Kalipatti, Cricket Ball",
+        season: "October – March",
+        description:
+          "Gujarat's own sapota from the Gholvad and Navsari belts, picked at the right maturity and ripened evenly in trays.",
+        image: "/images/products/chikoo.svg",
+        accent: "#F4EBDF",
+      },
+      {
+        slug: "malta",
+        name: "Malta",
+        varieties: "Malta sweet orange",
+        season: "November – February",
+        description:
+          "Juice-heavy Malta with a thin, bright rind. Sized and traded in full loads through the winter, straight from the growing regions.",
+        image: "/images/products/malta.svg",
+        accent: "#FDF0DF",
+      },
+    ],
   },
   {
-    slug: "pomegranate",
-    name: "Pomegranate",
-    varieties: "Bhagwa, Ganesh",
-    season: "September – February",
+    slug: "imported-fruits",
+    name: "Imported Fruits",
+    eyebrow: "Landed from abroad",
     description:
-      "Deep-blushed Bhagwa with heavy, ruby arils and a clean skin finish. Counted, cushioned and boxed by size so every crate carries a uniform grade.",
-    image: "/images/products/pomegranate.svg",
-    accent: "#FBEAEA",
-  },
-  {
-    slug: "dates",
-    name: "Dates",
-    varieties: "Fresh & semi-dry, assorted grades",
-    season: "Year round · peak May – August",
-    description:
-      "Plump, glossy dates handled in temperature-controlled lots. Available in retail-ready packs and bulk cartons for the festive and Ramzan seasons.",
-    image: "/images/products/dates.svg",
-    accent: "#F6EDE3",
-  },
-  {
-    slug: "muskmelon",
-    name: "Muskmelon",
-    varieties: "Kharbuja, netted varieties",
-    season: "March – June",
-    description:
-      "Field-ripened melons picked at full net and aroma. Sorted by weight and firmness so wholesalers get consistent shelf life through the summer rush.",
-    image: "/images/products/muskmelon.svg",
-    accent: "#FCF3E2",
-  },
-  {
-    slug: "kiwi",
-    name: "Kiwi",
-    varieties: "Hayward, imported grades",
-    season: "Year round",
-    description:
-      "Firm, evenly sized kiwi from trusted import channels, held at the right temperature and released in ripening stages that suit your selling window.",
-    image: "/images/products/kiwi.svg",
-    accent: "#EDF3E6",
-  },
-  {
-    slug: "malta",
-    name: "Malta Orange",
-    varieties: "Malta sweet orange",
-    season: "November – February",
-    description:
-      "Juice-heavy Malta with thin, bright rind. Sized and traded in full loads through the winter, straight from the growing regions to the market floor.",
-    image: "/images/products/malta.svg",
-    accent: "#FDF0DF",
-  },
-  {
-    slug: "mini-orange",
-    name: "Mini Orange",
-    varieties: "Kinnow, mandarin, mini orange",
-    season: "December – March",
-    description:
-      "Easy-peel mandarins with a clean sweet-tart balance. Graded small to medium for fruit bowls, gifting packs and daily retail counters.",
-    image: "/images/products/mini-orange.svg",
-    accent: "#FDEEE2",
+      "Premium imported lines brought in through trusted channels and held in the right conditions — berries, stone fruit, exotics and seedless grapes for hotels, gifting and high-end retail.",
+    products: [
+      {
+        slug: "apricot",
+        name: "Apricot",
+        varieties: "Turkish and Iranian grades",
+        season: "May – August",
+        description:
+          "Soft-skinned apricots with a clean blush, handled in cool lots and released in small, fast-moving consignments.",
+        image: "/images/products/apricot.svg",
+        accent: "#FDEFD9",
+      },
+      {
+        slug: "australian-peach",
+        name: "Australian Peach",
+        varieties: "Yellow flesh, export grade",
+        season: "December – March",
+        description:
+          "Southern-hemisphere peaches that land in our winter, firm enough to travel and sweet enough to sell straight off the box.",
+        image: "/images/products/australian-peach.svg",
+        accent: "#FCE9DE",
+      },
+      {
+        slug: "avocado",
+        name: "Avocado",
+        varieties: "Hass, imported grades",
+        season: "Year round",
+        description:
+          "Hass avocados brought in at the right pressure and ripened to order, so kitchens and counters get them exactly when they need them.",
+        image: "/images/products/avocado.svg",
+        accent: "#EDF2E4",
+      },
+      {
+        slug: "black-grapes",
+        name: "Black Grapes",
+        varieties: "Imported seedless black",
+        season: "December – April",
+        description:
+          "Big, dark, crunchy berries on clean stems — a premium bunch for gifting trays and high-end retail shelves.",
+        image: "/images/products/black-grapes.svg",
+        accent: "#F0EBF4",
+      },
+      {
+        slug: "beauty-pears",
+        name: "Beauty Pears",
+        varieties: "Red Beauty, imported pears",
+        season: "September – March",
+        description:
+          "Crisp, blushed pears that hold their bite for days, packed in moulded trays so they arrive unbruised.",
+        image: "/images/products/beauty-pears.svg",
+        accent: "#F6F3DF",
+      },
+      {
+        slug: "blueberry",
+        name: "Blueberry",
+        varieties: "Peruvian and Chilean punnets",
+        season: "November – March",
+        description:
+          "Firm, bloom-covered berries in sealed punnets, moved quickly through the cold chain to protect every day of shelf life.",
+        image: "/images/products/blueberry.svg",
+        accent: "#ECEEF7",
+      },
+      {
+        slug: "dragon-kiwi",
+        name: "Dragon Kiwi",
+        varieties: "Red-centred kiwi",
+        season: "November – February",
+        description:
+          "The red-hearted kiwi — sweeter and less sharp than green, and a genuine talking point on a premium counter.",
+        image: "/images/products/dragon-kiwi.svg",
+        accent: "#FBEAEE",
+      },
+      {
+        slug: "green-apple",
+        name: "Green Apple",
+        varieties: "Granny Smith, imported",
+        season: "Year round",
+        description:
+          "Hard, tart green apples with a waxy shine, sized uniformly for retail counters, juice centres and institutional kitchens.",
+        image: "/images/products/green-apple.svg",
+        accent: "#F0F4E3",
+      },
+      {
+        slug: "malta-imported",
+        name: "Malta (Imported)",
+        varieties: "Imported sweet orange",
+        season: "December – April",
+        description:
+          "Thin-skinned imported Malta with high juice recovery, landed in full containers through the peak winter demand.",
+        image: "/images/products/malta-imported.svg",
+        accent: "#FDF0DF",
+      },
+      {
+        slug: "green-grapes",
+        name: "Green Grapes",
+        varieties: "Imported seedless green",
+        season: "December – April",
+        description:
+          "Long, crisp green berries with a clean finish, graded on bunch weight and packed to hold their snap.",
+        image: "/images/products/green-grapes.svg",
+        accent: "#F1F5E2",
+      },
+      {
+        slug: "mulberry",
+        name: "Mulberry",
+        varieties: "Fresh seasonal mulberry",
+        season: "March – May",
+        description:
+          "A short, delicate season. Handled in shallow trays and moved the same day, because mulberry waits for nobody.",
+        image: "/images/products/mulberry.svg",
+        accent: "#F6EAF0",
+      },
+      {
+        slug: "mangosteen",
+        name: "Mangosteen",
+        varieties: "Thai mangosteen",
+        season: "June – September",
+        description:
+          "The queen of fruits — deep purple shells with snow-white segments, brought in by air for the short monsoon window.",
+        image: "/images/products/mangosteen.svg",
+        accent: "#F2EBF3",
+      },
+      {
+        slug: "red-cherry",
+        name: "Red Cherry",
+        varieties: "Turkish, American and Chilean",
+        season: "May – August",
+        description:
+          "Dark, glossy cherries with green stems intact, graded by calibre and kept cold from the airport to our stall.",
+        image: "/images/products/red-cherry.svg",
+        accent: "#FBE9EC",
+      },
+      {
+        slug: "red-globe-grapes",
+        name: "Red Globe Grapes",
+        varieties: "Imported Red Globe",
+        season: "October – February",
+        description:
+          "Large, firm red berries that travel well and display beautifully — a reliable favourite for festive and gifting demand.",
+        image: "/images/products/red-globe-grapes.svg",
+        accent: "#FBEBEF",
+      },
+      {
+        slug: "pink-guava",
+        name: "Pink Guava",
+        varieties: "Imported pink-flesh guava",
+        season: "August – February",
+        description:
+          "Pale green outside, deep pink within. Sweet, aromatic and increasingly asked for by juice centres and hotels.",
+        image: "/images/products/pink-guava.svg",
+        accent: "#F2F4E2",
+      },
+      {
+        slug: "nectarine",
+        name: "Nectarine",
+        varieties: "Imported yellow flesh",
+        season: "December – March",
+        description:
+          "Smooth-skinned and deeply coloured, with the firm bite buyers expect from a premium stone fruit.",
+        image: "/images/products/nectarine.svg",
+        accent: "#FBE8E5",
+      },
+      {
+        slug: "blackberry",
+        name: "Blackberry",
+        varieties: "Imported punnets",
+        season: "November – March",
+        description:
+          "Plump, near-black berries in sealed punnets — a specialist line for patisseries, hotels and premium retail.",
+        image: "/images/products/blackberry.svg",
+        accent: "#EFEBF2",
+      },
+      {
+        slug: "golden-kiwi",
+        name: "Golden Kiwi",
+        varieties: "SunGold and imported golden",
+        season: "May – November",
+        description:
+          "Golden-fleshed kiwi, sweeter and smoother than green, with a thin hairless skin that sells itself on the shelf.",
+        image: "/images/products/golden-kiwi.svg",
+        accent: "#FBF2DC",
+      },
+    ],
   },
 ];
+
+/** Flat view of every fruit we trade, in catalogue order. */
+export const PRODUCTS: Product[] = PRODUCT_CATEGORIES.flatMap(
+  (category) => category.products,
+);
 
 /* -------------------------------------------------------------------------- */
 /*  Services                                                                   */
